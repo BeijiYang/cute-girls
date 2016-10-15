@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+
+<!--<scroll-view style="height: 100%" scroll-y="true"   bindscrolltolower="lower" >-->
+  <view  wx:for="{{items}}" class="card" >
+    <image src="{{item.url}}" mode="aspectFill" class="image" bindtap="lookAtHer"/>
+    <view class="detail" >from@{{item.who}}—{{item.createdAt}}</view>
+  </view>
+<!--</scroll-view>-->
+  <button type="primary" size="{{primarySize}}"   bindtap="nextPage">{{btnText}}</button>
+  <!--<view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>-->
+</view>
