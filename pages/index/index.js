@@ -42,12 +42,21 @@ Page({
   lookAtHer: function (event) {
     console.log("spank her")
     
-    var herUrl = event.currentTarget.src
+    // var herUrl = event.currentTarget.dataset.src
 
+    var imageUrl = "/pages/image/image"
+
+    var herUrl = imageUrl+"?url="+event.currentTarget.dataset.url+"&who="+event.currentTarget.dataset.who; 
+    //  var herUrl = imageUrl+"?url="+event.currentTarget.dataset.url
+
+    console.log(herUrl)
+    // console.log(event.currentTarget.dataset.createdAt) //wxml中data－set不能有大写
     wx.navigateTo( {
-      url: "pages/image/image"
+      url: herUrl
     });
   },
+
+
 
   onLoad: function () {
     console.log('onLoad')

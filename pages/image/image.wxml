@@ -1,4 +1,4 @@
 <view class="container">
-{{motto}}
     <image src="{{url}}" mode="aspectFit" class="image" />
+    From: @{{who}}
 </view>

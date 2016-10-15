@@ -7,4 +7,5 @@
   justify-content: space-between;
   padding: 10rpx 0;
   box-sizing: border-box;
+  background-color:  #FFE0E7;
 } 

@@ -7,8 +7,10 @@
 
 <!--<scroll-view style="height: 100%" scroll-y="true"   bindscrolltolower="lower" >-->
   <view  wx:for="{{items}}" class="card" >
-    <image src="{{item.url}}" mode="aspectFill" class="image" bindtap="lookAtHer"/>
-    <view class="detail" >from@{{item.who}}—{{item.createdAt}}</view>
+    <view data-url="{{item.url}}" data-who="{{item.who}}" bindtap="lookAtHer">
+      <image src="{{item.url}}" mode="aspectFill" class="image" />
+      <view class="detail" >from@{{item.who}}—{{item.createdAt}}</view>
+    </view>
   </view>
 <!--</scroll-view>-->
   <button type="primary" size="{{primarySize}}"   bindtap="nextPage">{{btnText}}</button>
