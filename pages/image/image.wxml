@@ -1,4 +1,11 @@
 <view class="container">
-    <image src="{{url}}" mode="aspectFit" class="image" />
+
+    <modal title="要把她带回硬盘吗？" confirm-text="要啊" cancel-text="算了" hidden="{{modalHidden}}" bindconfirm="save" bindcancel="cancel"> </modal>
+    
+    <toast hidden="{{toastHidden}}" bindchange="toastChange">
+        已带走
+    </toast>
+
+    <image src="{{url}}" mode="aspectFit" class="image" onlongtap="onlongtap" />
     From: @{{who}}
 </view>

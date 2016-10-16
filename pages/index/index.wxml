@@ -2,8 +2,8 @@
 <view class="container">
 
 <loading hidden="{{hidden}}" bindchange="loadingChange">
-    加载中...
-  </loading>
+    妹子来了～
+</loading>
 
 <!--<scroll-view style="height: 100%" scroll-y="true"   bindscrolltolower="lower" >-->
   <view  wx:for="{{items}}" class="card" >
