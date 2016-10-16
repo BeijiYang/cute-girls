@@ -2,6 +2,7 @@ Page({
   data: {
     modalHidden: true,
     toastHidden:true,
+    toastText: "",
     // url: "https://avatars0.githubusercontent.com/u/16985427?v=3&s=40",
     url: "",
     who: "1024"
@@ -48,8 +49,15 @@ function downloadImage(that) {
    success: function(res) {
      console.log("download success")
      that.setData({
-      toastHidden: false
+      toastHidden: false,
+      toastText: "已带走"
     })
+    },
+    fail: function() {
+      that.setData({
+        toastHidden: false,
+        toastText: "带走失败"
+      })
     }
   })
 } 
