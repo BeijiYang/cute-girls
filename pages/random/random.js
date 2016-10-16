@@ -99,7 +99,7 @@ function requestData (that) {
 }
 
 function randomNumber(that) {
-  var currentPage = Math.round(Math.random()*(233-0)+0)
+  var currentPage = Math.round(Math.random()*(356-0)+0) //经测试，目前最多356张图
   console.log(currentPage)
   that.setData({
     currentPage: currentPage

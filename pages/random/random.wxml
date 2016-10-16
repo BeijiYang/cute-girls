@@ -13,5 +13,6 @@
     <image src="{{url}}" mode="aspectFit" class="image" onlongtap="onlongtap" />
     第{{currentPage}}枚妹子
 
-    <button type="default" loading="{{loading}}" bindtap="requestGirl"> {{btnText}} </button>
+    <button type="primary" loading="{{loading}}" bindtap="requestGirl"> {{btnText}} </button>
+    
 </view>
