@@ -107,18 +107,10 @@ function randomNumber(that) {
 }
 
 var items = [];
-// var i = 0;
-// var currentPage = 1;
 
 function bindData (cb) {
 console.log(cb)
 items.push({url: cb.results[0].url.replace( "//ww", "//ws" )}) //装填
-
-// for(i =0; i < 10; i++){
-//   items.push({url: cb.results[i].url.replace( "//ww", "//ws" ), who: cb.results[i].who, createdAt: cb.results[i].createdAt.slice(0,10)}) 
-//   console.log(items[i].url)
-//   console.log(items[i])
-// }
 
 console.log(items[0].url)
 }

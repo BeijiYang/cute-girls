@@ -6,13 +6,6 @@ Page({
     motto: 'Hello World',
     btnText: "还要 还要",
     hidden: false,
-    // items: [
-    //   {
-    //     url: "http://e.jikexueyuan.com/headerandfooter/images/logo.png?t=1475152597000",
-    //   },{
-    //     url: "http://e.jikexueyuan.com/headerandfooter/images/logo.png?t=1475152597000",
-    //   }
-    // ]
     items: []
   },
   //事件处理函数
@@ -30,14 +23,14 @@ Page({
   requestData(that) //通过api请求妹子数据
 },
 
-// lower: function() {
-//     console.log("1092384109284232")
-//     currentPage++
+lower: function() {
+    console.log("lowerlowerlowerlowerlowerlowerlower")
+    // currentPage++
 
-//   var that = this //通过回调传递this环境
+  // var that = this //通过回调传递this环境
 
-//   requestData(that) //通过api请求妹子数据
-//   },
+  // requestData(that) //通过api请求妹子数据
+  },
 
   lookAtHer: function (event) {
     console.log("spank her")

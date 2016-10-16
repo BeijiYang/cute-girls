@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
+  
     "pages/image/image",
     "pages/random/random"
   ],
@@ -15,9 +15,6 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
     },{
       "pagePath": "pages/random/random",
       "text": "随便看看"
