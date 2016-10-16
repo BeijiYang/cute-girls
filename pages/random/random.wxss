@@ -1,0 +1,10 @@
+.container{
+    height: 100%;
+    padding-bottom: 200rpx
+}
+
+.image {
+    width: 98%;
+    height: 1050rpx;
+    /*margin: 20rpx;*/
+}

@@ -1,0 +1,17 @@
+<view class="container">
+
+    <loading hidden="{{loadinghidden}}" bindchange="loadingChange">
+        妹子来了～
+    </loading>
+
+    <modal title="要把她带回硬盘吗？" confirm-text="要啊" cancel-text="算了" hidden="{{modalHidden}}" bindconfirm="save" bindcancel="cancel"> </modal>
+    
+    <toast hidden="{{toastHidden}}" bindchange="toastChange">
+        {{toastText}}
+    </toast>
+
+    <image src="{{url}}" mode="aspectFit" class="image" onlongtap="onlongtap" />
+    第{{currentPage}}枚妹子
+
+    <button type="default" loading="{{loading}}" bindtap="requestGirl"> {{btnText}} </button>
+</view>

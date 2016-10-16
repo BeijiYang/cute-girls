@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/image/image"
+    "pages/image/image",
+    "pages/random/random"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,6 +18,9 @@
     }, {
       "pagePath": "pages/logs/logs",
       "text": "日志"
+    },{
+      "pagePath": "pages/random/random",
+      "text": "随便看看"
     }]
   }
 }
