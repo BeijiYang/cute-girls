@@ -52,6 +52,22 @@ function downloadImage(that) {
       toastHidden: false,
       toastText: "已带走"
     })
+     console.log(res.tempFilePath)
+    //  var tempFilePath = res.tempFilePath
+    //  wx.saveFile({
+    //    tempFilePath: tempFilePath,
+    //    success: function (res) {
+    //      var savedFilePath = res.savedFilePath
+    //      console.log("保存到本地路径: " + savedFilePath)
+    //    }
+    //  })
+     var filePath = res.tempFilePath
+     wx.saveImageToPhotosAlbum({
+       filePath: filePath,
+       success(res) {
+         console.log("保存到本地路径: " + filePath)
+       }
+     })
     },
     fail: function() {
       that.setData({

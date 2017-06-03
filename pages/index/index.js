@@ -58,7 +58,18 @@ lower: function() {
 
     requestData(that) //通过api请求妹子数据
 
-  }
+  },
+
+
+  onPullDownRefresh: function() {
+    console.log(' onPullDownRefresh')
+
+    var that = this //通过回调传递this环境
+
+    requestData(that) //通过api请求妹子数据
+      wx.stopPullDownRefresh()
+    }
+
 })
 
 var Url = require("../../utils/url.js");
