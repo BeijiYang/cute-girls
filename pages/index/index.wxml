@@ -13,5 +13,5 @@
     </view>
   </view>
 <!--</scroll-view>-->
-  <button type="primary" size="{{primarySize}}"   bindtap="nextPage">{{btnText}}</button>
+  <!--<button type="primary" size="{{primarySize}}"   bindtap="nextPage">{{btnText}}</button>-->
 </view>

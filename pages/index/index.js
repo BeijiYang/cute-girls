@@ -23,23 +23,19 @@ Page({
   requestData(that) //通过api请求妹子数据
 },
 
-lower: function() {
-    console.log("lowerlowerlowerlowerlowerlowerlower")
-    // currentPage++
 
-  // var that = this //通过回调传递this环境
-
-  // requestData(that) //通过api请求妹子数据
+onReachBottom: function() {
+    this.nextPage();
   },
 
   lookAtHer: function (event) {
     console.log("spank her")
-    
+
     // var herUrl = event.currentTarget.dataset.src
 
     var imageUrl = "/pages/image/image"
 
-    var herUrl = imageUrl+"?url="+event.currentTarget.dataset.url+"&who="+event.currentTarget.dataset.who; 
+    var herUrl = imageUrl+"?url="+event.currentTarget.dataset.url+"&who="+event.currentTarget.dataset.who;
     //  var herUrl = imageUrl+"?url="+event.currentTarget.dataset.url
 
     console.log(herUrl)
@@ -53,7 +49,7 @@ lower: function() {
 
   onLoad: function () {
     console.log('onLoad')
-    
+
     var that = this //通过回调传递this环境
 
     requestData(that) //通过api请求妹子数据
@@ -103,11 +99,10 @@ console.log(cb)
 // items.push({url: cb.results[0].url.replace( "//ww", "//ws" )}) //装填
 
 for(i =0; i < 10; i++){
-  items.push({url: cb.results[i].url.replace( "//ww", "//ws" ), who: cb.results[i].who, createdAt: cb.results[i].createdAt.slice(0,10)}) 
+  items.push({url: cb.results[i].url.replace( "//ww", "//ws" ), who: cb.results[i].who, createdAt: cb.results[i].createdAt.slice(0,10)})
   console.log(items[i].url)
   console.log(items[i])
 }
 
 console.log(items)
 }
-
