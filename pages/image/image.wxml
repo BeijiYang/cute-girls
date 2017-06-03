@@ -1,6 +1,6 @@
 <view class="container">
 
-    <modal title="要把她带回硬盘吗？" confirm-text="要啊" cancel-text="算了" hidden="{{modalHidden}}" bindconfirm="save" bindcancel="cancel"> </modal>
+    <modal title="要把她带回去吗？" confirm-text="要啊" cancel-text="算了" hidden="{{modalHidden}}" bindconfirm="save" bindcancel="cancel"> </modal>
     
     <toast hidden="{{toastHidden}}" bindchange="toastChange">
         {{toastText}}
