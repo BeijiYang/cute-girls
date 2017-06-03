@@ -5,6 +5,10 @@
     妹子来了～
 </loading>
 
+<toast hidden="{{toastHidden}}" bindchange="toastChange">
+    {{toastText}}
+</toast>
+
 <!--<scroll-view style="height: 100%" scroll-y="true"   bindscrolltolower="lower" >-->
   <view  wx:for="{{items}}" class="card" >
     <view data-url="{{item.url}}" data-who="{{item.who}}" bindtap="lookAtHer">

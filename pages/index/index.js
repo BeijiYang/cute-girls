@@ -4,9 +4,10 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-    btnText: "还要 还要",
     hidden: false,
-    items: []
+    items: [],
+    toastHidden: true,
+    toastText: "",
   },
   //事件处理函数
 
@@ -64,8 +65,35 @@ onReachBottom: function() {
 
     requestData(that) //通过api请求妹子数据
       wx.stopPullDownRefresh()
-    }
+    },
 
+    onShareAppMessage: function () {
+    var that = this
+    return {
+      title: '粉嫩妹子图',
+      path: '/pages/index/index',
+      
+      success: function(res) {
+        that.setData({
+          toastHidden: false,
+          toastText: "分享成功"
+        })
+        console.log("分享成功");
+      },
+      fail: function(res) {
+        that.setData({
+          toastHidden: false,
+          toastText: "分享失败"
+        })
+        console.log("分享失败");
+      }
+    }
+  },
+  toastChange: function () {
+    this.setData({
+      toastHidden: true
+    })
+  }
 })
 
 var Url = require("../../utils/url.js");
