@@ -52,6 +52,28 @@ Page({
     this.setData({
       toastHidden: true
     })
+  },
+  onShareAppMessage: function () {
+    var that = this
+    return {
+      title: '粉嫩妹子图',
+      path: '/pages/random/random',
+
+      success: function (res) {
+        that.setData({
+          toastHidden: false,
+          toastText: "分享成功"
+        })
+        console.log("分享成功");
+      },
+      fail: function (res) {
+        that.setData({
+          toastHidden: false,
+          toastText: "分享失败"
+        })
+        console.log("分享失败");
+      }
+    }
   }
 })
 
@@ -64,7 +86,14 @@ function downloadImage(that) {
      that.setData({
       toastHidden: false,
       toastText: "已带走"
-    })
+    });
+    let filePath = res.tempFilePath
+    wx.saveImageToPhotosAlbum({
+       filePath: filePath,
+       success(res) {
+         console.log("保存到本地路径: " + filePath)
+       }
+     })
     },
     fail: function() {
       that.setData({
