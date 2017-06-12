@@ -1,7 +1,15 @@
 <!--logs.wxml-->
 <view class="container log-list">
-{{motto}}
+<view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}{{account}}</text>
+  </view>
+<button type="primary" size="{{primarySize}}"   bindtap="scanCode">{{btnText}}</button>
+<!--{{motto}}
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+  </block>-->
 </view>
